@@ -1,0 +1,17 @@
+table {
+    margin: 0 auto;
+}
+
+td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.heads th {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.num, .job, .sex {
+    width: 100px;
+}
