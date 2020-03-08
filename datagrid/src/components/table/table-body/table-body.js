@@ -1,11 +1,8 @@
 import React, { Fragment } from "react";
-import { people } from './info';
 
 import "./table-body.css";
 
-const TableBody = () => {
-
-    console.log(people);
+const TableBody = (props) => {
 
     return (
     <div>
@@ -13,10 +10,12 @@ const TableBody = () => {
         <thead>
             <tr className='heads'>
               <th>№</th>
-              <th>Name</th>
+              <th onClick={props.onSort.bind(null, 'name')}>Name
+              {props.sortField === 'name' ? <small>{props.sort}</small> : <small>  ↑↓ </small>}</th>
               <th>Sex</th>
               <th>Job Type</th>
-              <th>Score</th>
+              <th onClick={props.onSort.bind(null, 'number')}>Score
+              {props.sortField === 'number' ? <small>{props.sort}</small> : <small>  ↑↓ </small>}</th>
               <th>Country</th>
               <th>City</th>
               <th>Currency Symbol</th>
@@ -24,7 +23,7 @@ const TableBody = () => {
           </thead>
             <tbody>
                     {
-                        people.map(person => (
+                        props.data.map(person => (
                             <tr key={person.id}>
                                 <td>{person.id}</td>
                                 <td>{person.name}</td>
