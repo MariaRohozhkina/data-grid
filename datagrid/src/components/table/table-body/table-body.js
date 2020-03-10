@@ -6,33 +6,33 @@ const TableBody = (props) => {
 
     return (
     <div>
-        <table className='body'>
+        <table>
         <thead>
-            <tr className='heads'>
-              <th>№</th>
-              <th onClick={props.onSort.bind(null, 'name')}>Name
+            <tr className='head'>
+              <th className='head-order'>№</th>
+              <th onClick={props.onSort.bind(null, 'name')} className='head-name'>Name
               {props.sortField === 'name' ? <small>{props.sort}</small> : <small>  ↑↓ </small>}</th>
-              <th>Sex</th>
-              <th>Job Type</th>
-              <th onClick={props.onSort.bind(null, 'number')}>Score
+              <th className='hun'>Activity</th>
+              <th className='head-job'>Job Type</th>
+              <th onClick={props.onSort.bind(null, 'number')} className='hun'>Score
               {props.sortField === 'number' ? <small>{props.sort}</small> : <small>  ↑↓ </small>}</th>
-              <th>Country</th>
-              <th>City</th>
-              <th>Currency Symbol</th>
+              <th className='head-country'>Country</th>
+              <th className='head-city'>City</th>
+              <th className='head-symbol'>Currency Symbol</th>
             </tr>
           </thead>
             <tbody>
                     {
                         props.data.map(person => (
                             <tr key={person.id}>
-                                <td>{person.id}</td>
-                                <td>{person.name}</td>
-                                <td className='sex'>{person.sex}</td>
+                                <td className='order'>{person.id}</td>
+                                <td className='name'>{person.name}</td>
+                                <td className='activity'>{person.activity}</td>
                                 <td className='job'>{person.job}</td>
                                 <td className='num'>{person.number}</td>
-                                <td>{person.country}</td>
-                                <td>{person.city}</td>
-                                <td>{person.currency}</td>
+                                <td className='country'>{person.country}</td>
+                                <td className='city'>{person.city}</td>
+                                <td className='symbol'>{person.currency}</td>
                             </tr>
                         ))
                     }

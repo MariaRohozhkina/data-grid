@@ -13,18 +13,18 @@ function createValues() {
         // numbers.push(numberPhone);
         // const trueOrFalseValue = faker.random.boolean(); 
         // trueOrFalse.push(trueOrFalseValue);
-        let sex;
+        let activity;
 
         if (faker.random.boolean()) {
-            sex = 'female';
+            activity = 'active';
         } else {
-            sex = 'male';
+            activity = 'passive';
         }
 
         const person = {
             id: i,
             name: faker.name.findName(),
-            sex: sex,
+            activity: activity,
             job: faker.name.jobType(),
             number: faker.random.number(),
             currency: faker.finance.currencySymbol(),
