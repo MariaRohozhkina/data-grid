@@ -19,9 +19,10 @@ const TableBody = (props) => {
               <th className='head-country'>Country</th>
               <th className='head-city'>City</th>
               <th className='head-symbol'>Currency Symbol</th>
+              <th className='head-color'>Color of the skin</th>
             </tr>
           </thead>
-            <tbody>
+            <tbody onClick={props.onClick}>
                     {
                         props.data.map(person => (
                             <tr key={person.id}>
@@ -33,6 +34,7 @@ const TableBody = (props) => {
                                 <td className='country'>{person.country}</td>
                                 <td className='city'>{person.city}</td>
                                 <td className='symbol'>{person.currency}</td>
+                                <td className='color'>{person.colorOfSkin}</td>
                             </tr>
                         ))
                     }

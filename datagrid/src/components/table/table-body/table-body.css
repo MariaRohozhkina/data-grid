@@ -22,7 +22,6 @@ td {
 }
 
 .head {
-    width: 1141px;
     background: rgb(141,173,51);
 }
 
@@ -55,4 +54,8 @@ td {
 
 .head-symbol, .symbol {
     width: 129px;
+}
+
+.head-color {
+    width: 150px;
 }

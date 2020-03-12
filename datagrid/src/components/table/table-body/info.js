@@ -2,23 +2,27 @@ import React, { Fragment } from "react";
 
 const faker = require('faker');
 const people = [];
-// const numbers = [];
-// const trueOrFalse = [];
+
 
 function createValues() {
     for (let i = 1; i < 1001; i++) {
-        // const name = faker.name.findName();
-        // names.push(name);
-        // const numberPhone = faker.random.number(); 
-        // numbers.push(numberPhone);
-        // const trueOrFalseValue = faker.random.boolean(); 
-        // trueOrFalse.push(trueOrFalseValue);
+        const ran = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+
         let activity;
+        let colorOfSkin;
 
         if (faker.random.boolean()) {
             activity = 'active';
         } else {
             activity = 'passive';
+        }
+
+        if (ran === 1) {
+            colorOfSkin = 'white';
+        } else if (ran === 2) {
+            colorOfSkin = 'black'
+        } else {
+            colorOfSkin = 'yellow'
         }
 
         const person = {
@@ -30,6 +34,7 @@ function createValues() {
             currency: faker.finance.currencySymbol(),
             country: faker.address.country(),
             city: faker.address.city(),
+            colorOfSkin: colorOfSkin,
         }
         
         people.push(person);
