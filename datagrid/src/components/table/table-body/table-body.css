@@ -1,0 +1,61 @@
+table {
+    margin: 0 auto;
+    width: 1141px;
+    height: 25000px;
+    overflow: auto;
+}
+
+td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.head th {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background: rgb(141,173,51);
+}
+
+.num, .activity {
+    width: 100px;
+}
+
+.head {
+    background: rgb(141,173,51);
+}
+
+.hun {
+    width: 100px;
+}
+
+.head-order, .order {
+    position: sticky;
+    left: 0;
+    background: rgb(141,173,51);
+    width: 36px;
+}
+
+.head-name, .name {
+    width: 189px;
+}
+
+.head-job, .job {
+    width: 104px;
+}
+
+.head-country, .country {
+    width: 353px;
+}
+
+.head-city, .city {
+    width: 173px;
+}
+
+.head-symbol, .symbol {
+    width: 129px;
+}
+
+.head-color {
+    width: 150px;
+}
