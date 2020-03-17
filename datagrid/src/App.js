@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import _ from 'lodash';
 import { people } from './components/table/table-body/info';
